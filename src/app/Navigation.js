@@ -4,10 +4,10 @@ import styles from './Navigation.module.css';
 
 const NavBar = () => {
   const navItems = [
-    { name: 'Home', path: 'home' },
-    { name: 'About', path: 'about' },
-    { name: 'Projects', path: 'projects' },
-    { name: 'Contact', path: 'contact' },
+    { name: 'home', path: 'home' },
+    { name: 'about', path: 'about' },
+    { name: 'projects', path: 'projects' },
+    { name: 'contact', path: 'contact' },
   ];
 
   const scrollToSection = (id) => {
@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <h1 className={styles.title}>My Portfolio</h1>
+        <h1 className={styles.title}></h1>
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.path}>

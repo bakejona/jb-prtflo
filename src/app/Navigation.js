@@ -4,7 +4,6 @@ import styles from './Navigation.module.css';
 
 const NavBar = () => {
   const navItems = [
-    { name: 'home', path: 'home' },
     { name: 'about', path: 'about' },
     { name: 'projects', path: 'projects' },
     { name: 'contact', path: 'contact' },

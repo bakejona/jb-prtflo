@@ -16,3 +16,9 @@ section {
     background-color: #EEEEEE;
     border-radius: 20px;
 }
+
+
+/*removes random section*/
+#loom-companion-mv3 {
+    display: none;
+}

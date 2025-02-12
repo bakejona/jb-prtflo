@@ -1,0 +1,17 @@
+/* AboutSection.module.css */
+.section {
+    padding: 50px;
+    background: #f4f4f4;
+  }
+  
+  .heading {
+    color: darkblue;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  
+  .paragraph {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  

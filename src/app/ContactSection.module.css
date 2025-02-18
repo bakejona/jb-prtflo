@@ -4,9 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
-.formContainer {
+  }
+  
+  .formContainer {
     height: 80%;
     width: 80%;
     display: flex;
@@ -17,19 +17,20 @@
     background-color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.formText {
+  }
+  
+  .formText {
     width: 80%;
-}
-.formContainer h1 {
+  }
+  
+  .formContainer h1 {
     font-size: 2.5rem;
-}
-.formContainer p {
+  }
+  
+  .formContainer p {
     color: rgb(150, 150, 150);
     padding-bottom: 15px;
-}
+  }
   
   .submitButton {
     width: 80%;
@@ -41,33 +42,28 @@
     cursor: pointer;
     text-align: left;
     transition: all 0.3s ease-in-out;
-
   }
   
   .submitButton:hover {
-    background-color: rgb(60, 60, 60) ;
+    background-color: rgb(60, 60, 60);
     transform: scale(1.01);
   }
   
-  :global(input) {
-    height: 50px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 80%;
+  /* Global styles for input and textarea */
+  :global {
+    input,
+    textarea {
+      height: 50px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 80%;
+    }
+  
+    input:focus,
+    textarea:focus {
+      outline-color: black;
+    }
   }
-  :global(textarea) {
-    height: 80px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 80%;
-  }
-  input:focus {
-    outline-color: black;
-  }
-  textarea:focus {
-    outline-color: black;
-  }
+  

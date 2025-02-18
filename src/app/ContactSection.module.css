@@ -49,21 +49,3 @@
     transform: scale(1.01);
   }
   
-  /* Global styles for input and textarea */
-  :global {
-    input,
-    textarea {
-      height: 50px;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      width: 80%;
-    }
-  
-    input:focus,
-    textarea:focus {
-      outline-color: black;
-    }
-  }
-  

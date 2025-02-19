@@ -76,7 +76,7 @@ const ContactSection = () => {
         ></textarea>
         
         <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : isSent ? 'Sent! ✅' : 'Send'}
+          {isSubmitting ? 'Sending...' : isSent ? 'Sent ✅' : 'Send'}
         </button>
       </form>
       

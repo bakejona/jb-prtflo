@@ -14,7 +14,6 @@ const skills = [
   { name: 'Adobe Illustrator', logo: '/logos/adobe-illustrator.svg' },
 ];
 
-// Media links
 const AboutSection = () => {
   const githubLink = 'https://github.com/bakejona';
   const linkedinLink = 'https://www.linkedin.com/in/jonathan-baker-5291351b5/';

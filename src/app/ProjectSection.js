@@ -6,14 +6,14 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "Curling You Say?",
-      image: "/logos/CYS-mock.png", // Replace with actual image path
+      image: "/logos/CYS-mock.png",
       github: "https://github.com/bakejona/CurlingYouSay2",
       live: "https://curling-you-say2.vercel.app/",
     },
     {
       id: 2,
       title: "Loci",
-      image: "/logos/loci-mockup.png", // Replace with actual image path
+      image: "/logos/loci-mockup.png",
       github: "https://github.com/your-repo2",
       live: "https://your-live-site2.com",
     },

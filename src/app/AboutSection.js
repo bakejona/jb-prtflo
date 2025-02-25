@@ -2,8 +2,7 @@ import styles from './AboutSection.module.css';
 import Image from 'next/image';
 import Head from 'next/head';
 
-
-//adding logos
+// Adding logos
 const skills = [
   { name: 'HTML', logo: '/logos/html.svg' },
   { name: 'CSS', logo: '/logos/css.svg' },
@@ -15,32 +14,34 @@ const skills = [
   { name: 'Adobe Illustrator', logo: '/logos/adobe-illustrator.svg' },
 ];
 
-//media links
+// Media links
 const AboutSection = () => {
   const githubLink = 'https://github.com/bakejona';
   const linkedinLink = 'https://www.linkedin.com/in/jonathan-baker-5291351b5/';
 
-<Head>
-<title>&#128075; Jonathan</title>
-</Head>
   return (
-    <section id="about" className={styles.section}>
+    <section id="about" className={styles.aboutSection}>
+      <Head>
+        <title>&#128075; Jonathan</title>
+      </Head>
+      
+
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <div className={styles.maskingContainer}>
-            <h1 className={styles.header}><span>&#128075;</span> Hi, I'm Jonathan</h1>
+            <h1 className={styles.header}><span>👋</span> Hi, I'm Jonathan</h1>
           </div>
           <p className={styles.paragraph}>
             I am a UX/UI designer, developer, and passionate about creating user-centered experiences.
           </p>
         </div>
       </div>
-      
+
       <div className={styles.socialLinks}>
-        <a href={githubLink} >
+        <a href={githubLink}>
           <Image src="/logos/github.svg" alt="GitHub" className={styles.socialLogo} width={40} height={40} />
         </a>
-        <a href={linkedinLink} >
+        <a href={linkedinLink}>
           <Image src="/logos/linkedin.svg" alt="LinkedIn" className={styles.socialLogo} width={40} height={40} />
         </a>
       </div>

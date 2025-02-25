@@ -1,0 +1,59 @@
+/* projectSection.module.css */
+.projectsSection {
+    padding: 1rem 1rem;
+    background-color: #f3f4f6;
+    text-align: center;
+  }
+  
+  .projectsTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+
+  
+  .projectImageContainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  .projectImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+  
+  .buttonsContainer {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .iconButton {
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  
+
+  
+  .projectTitle {
+    font-size: 1.2rem;
+  }  

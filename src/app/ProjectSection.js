@@ -12,8 +12,8 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "Project Two",
-      image: "/path-to-your-image2.jpg", // Replace with actual image path
+      title: "Loci",
+      image: "/logos/loci-mockup.png", // Replace with actual image path
       github: "https://github.com/your-repo2",
       live: "https://your-live-site2.com",
     },

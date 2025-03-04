@@ -4,7 +4,7 @@ import styles from './Navigation.module.css';
 
 const NavBar = () => {
   const navItems = [
-    { name: 'about', path: 'about' },
+    { name: 'home', path: 'about' },
     { name: 'projects', path: 'projects' },
     { name: 'contact', path: 'contact' },
   ];
@@ -19,7 +19,7 @@ const NavBar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <h1 className={styles.title}></h1>
+        <h1 className={styles.title}>jb.</h1>
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.path}>
@@ -38,4 +38,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

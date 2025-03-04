@@ -28,10 +28,10 @@ const AboutSection = () => {
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <div className={styles.maskingContainer}>
-            <h1 className={styles.header}><span>👋</span> Hi, I'm Jonathan</h1>
+            <h1 className={styles.header}><span>👋</span> Hi there, I'm Jonathan</h1>
           </div>
           <p className={styles.paragraph}>
-            I am a UX/UI designer, developer, and passionate about creating user-centered experiences.
+            UX/UI DESIGNER + DEVELOPER 
           </p>
         </div>
       </div>
@@ -47,7 +47,7 @@ const AboutSection = () => {
 
       <div className={styles.container}>
         <div className={styles.mySkills}>
-          <h1>My Skills</h1>
+          <p>MY SKILLS</p>
           <div className={styles.skillsGrid}>
             {skills.map((skill) => (
               <div key={skill.name} className={styles.skillBox}>

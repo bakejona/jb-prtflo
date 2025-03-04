@@ -10,9 +10,7 @@
   background: white;
   z-index: 1000;
 }
-body {
-  padding-top: 4rem; 
-}
+
     
     .container {
       display: flex;

@@ -49,3 +49,19 @@
     transform: scale(1.01);
   }
   
+  @media (max-width: 768px) {
+    .contactSection {
+      width: 95%;
+      padding: 30px;
+      border-radius: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contactSection {
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+  

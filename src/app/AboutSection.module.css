@@ -1,3 +1,4 @@
+
 .container {
   padding: 20px;
   width: 100%;
@@ -162,6 +163,7 @@
   }
 }
 
+/*
 @media (max-width: 480px) {
   .header {
     font-size: 1.8rem;
@@ -180,4 +182,5 @@
     gap: 8px;
   }
 }
+  */
 

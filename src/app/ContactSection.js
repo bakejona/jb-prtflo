@@ -47,7 +47,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className={styles.section}>
+    <section id="contact" className={styles.contactSection}>
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <div className={styles.formText}>
           <h1>Contact Me 📝</h1>

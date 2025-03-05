@@ -31,7 +31,7 @@ const AboutSection = () => {
             <h1 className={styles.header}><span>👋</span> Hi there, I'm Jonathan</h1>
           </div>
           <p className={styles.paragraph}>
-            UX/UI DESIGNER + DEVELOPER 
+            UX/UI DESIGNER & DEVELOPER 
           </p>
         </div>
       </div>

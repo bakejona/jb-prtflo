@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Poppins, Outfit } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/react"
 
 //font styles and imports
 const poppins = Poppins({ 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.className} ${outfit.className}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );

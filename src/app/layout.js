@@ -1,3 +1,4 @@
+// src/app/layout.js
 import "./globals.css";
 import { Poppins, Outfit } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
@@ -18,8 +19,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        {/* Add favicon link */}
-        <link rel="icon" href="/logos/favicon.ico" />
+        {/* Correct path to favicon in the public folder */}
+        <link rel="icon" href="/logos/favicon.png" />
       </Head>
       <body className={`${poppins.className} ${outfit.className}`}>
         {children}

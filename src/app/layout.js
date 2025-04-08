@@ -1,8 +1,9 @@
 import "./globals.css";
 import { Poppins, Outfit } from 'next/font/google';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import Head from 'next/head';
 
-//font styles and imports
+// Font styles and imports
 const poppins = Poppins({ 
   weight: ['400', '600', '700', '800', '900'],
   subsets: ['latin'] 
@@ -13,11 +14,13 @@ const outfit = Outfit({
   subsets: ['latin'] 
 });
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        {/* Add favicon link */}
+        <link rel="icon" href="/logos/favicon.ico" />
+      </Head>
       <body className={`${poppins.className} ${outfit.className}`}>
         {children}
         <Analytics />
@@ -25,3 +28,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+

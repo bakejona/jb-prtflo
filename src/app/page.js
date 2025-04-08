@@ -1,4 +1,4 @@
-// HomePage.js
+// src/app/page.js
 import NavBar from './Navigation';
 import AboutSection from './AboutSection';
 import ProjectsSection from './ProjectSection';

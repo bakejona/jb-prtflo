@@ -101,3 +101,20 @@
   font-size: 1rem;
   opacity: 0.9;
 }
+
+.toolsUsed {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolBadge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+

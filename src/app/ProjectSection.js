@@ -2,7 +2,6 @@ import styles from "./projectSection.module.css";
 import { FaGithub } from "react-icons/fa";
 import { BiSolidRightTopArrowCircle } from "react-icons/bi";
 
-
 const ProjectsSection = () => {
   const projects = [
     {
@@ -12,6 +11,7 @@ const ProjectsSection = () => {
       image: "/logos/CYS-mock.png",
       github: "https://github.com/bakejona/CurlingYouSay2",
       live: "https://curling-you-say2.vercel.app/",
+      tools: ["Next.js", "JavaScript", "CSS", "HTML",]
     },
     {
       id: 2,
@@ -20,6 +20,25 @@ const ProjectsSection = () => {
       image: "/logos/loci-mockup.png",
       github: "https://github.com/your-repo2",
       live: "https://your-live-site2.com",
+      tools: ["Figma", "AdobeXD",]
+    },
+    {
+      id: 3,
+      title: "Cherry Blossom Festival",
+      description: "A group project that created a website and forum for cherry blossom trees.",
+      image: "/logos/cherry-mockup.png",
+      github: "https://github.com/bakejona/cherry-blossom",
+      live: "https://cherry-blossom-five.vercel.app/",
+      tools: ["Next.js","React", "CSS", "HTML",]
+    },
+    {
+      id: 4,
+      title: "PokePortal",
+      description: "A Pokemon themed website that allows users to view and interact with a database of Pokémon.",
+      image: "/logos/poke-mockup.png",
+      github: "https://github.com/bakejona/pokemon-pages",
+      live: "https://pokemon-pages-gqcy.vercel.app/",
+      tools: ["Next.js","React", "CSS", "HTML",]
     },
   ];
 
@@ -37,8 +56,6 @@ const ProjectsSection = () => {
                 className={`${styles.iconButton} ${styles.githubButton}`}
               >
                 <FaGithub />
-
-
               </a>
               <a
                 href={project.live}
@@ -47,9 +64,6 @@ const ProjectsSection = () => {
                 className={`${styles.iconButton} ${styles.liveButton}`}
               >
                 <BiSolidRightTopArrowCircle />
-
-
-
               </a>
             </div>
 
@@ -61,10 +75,17 @@ const ProjectsSection = () => {
               />
             </div>
 
-            {/* Bottom pop-up for title & description */}
+            {/* Bottom pop-up for title, description, tools */}
             <div className={styles.projectInfo}>
               <h2 className={styles.projectTitle}>{project.title}</h2>
               <p className={styles.projectDescription}>{project.description}</p>
+              <div className={styles.toolsUsed}>
+                {project.tools.map((tool, index) => (
+                  <span key={index} className={styles.toolBadge}>
+                    {tool}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

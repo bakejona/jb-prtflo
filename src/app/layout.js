@@ -4,6 +4,12 @@ import { Poppins, Outfit } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
 import Head from 'next/head';
 
+export const metadata = {
+  icons: {
+    icon: '/logos/favicon.png',
+  },
+}
+
 // Font styles and imports
 const poppins = Poppins({ 
   weight: ['400', '600', '700', '800', '900'],

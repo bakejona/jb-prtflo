@@ -76,6 +76,7 @@ textarea.formInput:focus {
   .formContainer {
     max-width: 90%;
     padding: 15px;
+    border-radius: 20px;
   }
 
   .formText {
@@ -99,6 +100,7 @@ textarea.formInput:focus {
     max-width: 100%;
     border-radius: 0;
     padding: 10px;
+    border-radius: 20px;
   }
   
   .formText {

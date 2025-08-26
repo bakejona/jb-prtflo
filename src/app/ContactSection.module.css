@@ -32,6 +32,24 @@
   padding-bottom: 15px;
 }
 
+.formInput {
+  height: 50px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 80%;
+}
+
+textarea.formInput {
+  height: 80px;
+}
+
+.formInput:focus,
+textarea.formInput:focus {
+  outline-color: black;
+}
+
 .submitButton {
   width: 80%;
   padding: 15px 15px;
@@ -55,51 +73,41 @@
 
 /* Media Query for Tablets (max-width: 768px) */
 @media (max-width: 768px) {
-.formContainer {
-  max-width: 90%;
-  padding: 15px;
-}
+  .formContainer {
+    max-width: 90%;
+    padding: 15px;
+  }
 
-.formText {
-  width: 90%;
-  text-align: center;
-}
+  .formText {
+    width: 90%;
+    text-align: center;
+  }
 
-.formContainer h1 {
-  font-size: 2rem;
-}
-
-input,
-textarea,
-.submitButton {
-  width: 90%;
-}
+  .formInput,
+  .submitButton {
+    width: 90%;
+  }
 }
 
 /* Media Query for Phones (max-width: 480px) */
 @media (max-width: 480px) {
-.contactSection {
-  height: auto;
-}
+  .contactSection {
+    height: auto;
+  }
 
-.formContainer {
-  max-width: 100%;
-  border-radius: 0;
-  padding: 10px;
-}
+  .formContainer {
+    max-width: 100%;
+    border-radius: 0;
+    padding: 10px;
+  }
+  
+  .formText {
+    width: 100%;
+    text-align: center;
+  }
 
-.formText {
-  width: 100%;
-  text-align: center;
-}
-
-.formContainer h1 {
-  font-size: 1.8rem;
-}
-
-input,
-textarea,
-.submitButton {
-  width: 100%;
-}
+  .formInput,
+  .submitButton {
+    width: 100%;
+  }
 }

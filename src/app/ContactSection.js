@@ -60,6 +60,7 @@ const ContactSection = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          className={styles.formInput} // Changed to local class
         />
         <input
           type="email"
@@ -67,12 +68,14 @@ const ContactSection = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          className={styles.formInput} // Changed to local class
         />
         <textarea
           placeholder="Your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
+          className={styles.formInput} // Changed to local class
         ></textarea>
         
         <button type="submit" className={styles.submitButton} disabled={isSubmitting}>

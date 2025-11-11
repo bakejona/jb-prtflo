@@ -33,11 +33,11 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "PokePortal",
-      description: "A Pokemon themed website that allows users to view and interact with a database of Pokémon.",
-      image: "/logos/poke-mockup.png",
-      github: "https://github.com/bakejona/pokemon-pages",
-      live: "https://pokemon-pages-gqcy.vercel.app/",
+      title: "Scooper-Co",
+      description: "A modern, mobile-responsive application for a pet waste removal service, featuring service descriptions and a quote request form powered by a Nodemailer API endpoint.",
+      image: "/logos/scooper-mockup.png",
+      github: "https://github.com/bakejona/scooper-co",
+      live: "https://scooper-co.com/",
       tools: ["Next.js","React", "CSS", "HTML",]
     },
   ];

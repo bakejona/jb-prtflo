@@ -1,44 +1,11 @@
 .aboutSection {
   position: relative;
   overflow: hidden; 
-  background:  url('/logos/mesh-gradient.png');
-  background-size: 300% 300%; 
-  background-position: center; 
-  background-blend-mode: overlay;
-  animation: lavaLamp 20s ease-in-out infinite, moveBackground 20s linear infinite;
-  padding: 50px 20px;
-}
-
-/* Lava Lamp Animation */
-@keyframes lavaLamp {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-/* Additional Horizontal and Vertical Movement Animation */
-@keyframes moveBackground {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%; /* Move horizontally to the right */
-  }
-  50% {
-    background-position: 100% 100%; /* Move diagonally */
-  }
-  75% {
-    background-position: 0% 100%; /* Move horizontally to the left */
-  }
-  100% {
-    background-position: 0% 0%; /* Return to the original position */
-  }
+  background-image: url('/logos/5A.png');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: #222222;
 }
 
 

@@ -1,6 +1,7 @@
 import styles from './AboutSection.module.css';
 import Image from 'next/image';
 import Head from 'next/head';
+import NavBar from './Navigation';
 
 // Adding logos
 const skills = [
@@ -20,6 +21,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className={styles.aboutSection}>
+      <NavBar/>
       <Head>
         <title>&#128075; Jonathan</title>
       </Head>

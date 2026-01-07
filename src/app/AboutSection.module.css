@@ -6,7 +6,13 @@
    background-size: cover;
    background-repeat: no-repeat;
    background-color: #222222;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+
 }
+
 
 
 .container {

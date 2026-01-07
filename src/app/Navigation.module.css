@@ -1,16 +1,22 @@
 .navbar {
-  position: fixed;
+  /* Change from fixed to absolute so it stays inside the About section */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 98%;
+  width: 100%; /* Change to 100% to span full width */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: white;
+  padding: 4rem;
+  background: transparent; /* Make background transparent */
   z-index: 1000;
+  color: white;
 }
 
+/* Update title color if needed to be visible on your gradient */
+.title {
+  color: #ffffff; /* Adjust this color if it clashes with your new gradient */
+}
     
     .container {
       display: flex;
@@ -41,7 +47,7 @@
       cursor: pointer;
       padding-bottom: 0.2rem;
       text-decoration: none;
-      color: black;
+      color: white;
       position: relative;
     }
     

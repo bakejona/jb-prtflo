@@ -1,0 +1,70 @@
+.tickerContainer {
+  /* Dimensions */
+  width: 100%;
+  height: 100px; /* Fixed height for the tab look */
+  margin-top: 0; /* No gap between hero and skills */
+  
+  /* Flex centering */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  
+  /* The "Tab" Look */
+  background: rgba(0, 0, 0, 0.85); /* Darker background to contrast with hero */
+  backdrop-filter: blur(10px);
+  
+  /* Border Radius: 0 on top, 4rem on bottom corners */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  
+  /* Optional: Subtle top border to separate slightly from gradient */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+  animation: scroll 30s linear infinite;
+  padding-left: 2rem; /* Initial padding */
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.icon {
+  width: auto;
+  height: 40px;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); } /* Assuming 4x duplication */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .tickerContainer {
+    height: 80px;
+    border-bottom-left-radius: 2rem; /* Smaller radius on mobile looks better */
+    border-bottom-right-radius: 2rem;
+  }
+  
+  .icon {
+    height: 30px;
+  }
+}

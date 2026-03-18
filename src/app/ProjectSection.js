@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       id: 1,
       title: "Curling You Say?",
       description: "An informational website that provides information about the sport of curling.",
-      image: "/logos/CYS-mock.png",
+      image: "/logos/CYS-mock.svg",
       github: "https://github.com/bakejona/CurlingYouSay2",
       live: "https://curling-you-say2.vercel.app/",
       tools: ["Next.js", "JavaScript", "CSS", "HTML",]
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       id: 2,
       title: "Loci",
       description: "A mockup for a local art marketplace and community building app.",
-      image: "/logos/loci-mockup.png",
+      image: "/logos/loci-mockup.svg",
       github: "https://github.com/your-repo2",
       live: "https://your-live-site2.com",
       tools: ["Figma", "AdobeXD",]
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       id: 3,
       title: "Cherry Blossom Festival",
       description: "A group project that created a website and forum for cherry blossom trees.",
-      image: "/logos/cherry-mockup.png",
+      image: "/logos/cherry-mockup.svg",
       github: "https://github.com/bakejona/cherry-blossom",
       live: "https://cherry-blossom-five.vercel.app/",
       tools: ["Next.js","React", "CSS", "HTML",]
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       id: 4,
       title: "Scooper-Co",
       description: "A modern, mobile-responsive application for a pet waste removal service, featuring service descriptions and a quote request form powered by a Nodemailer API endpoint.",
-      image: "/logos/scooper-mockup.png",
+      image: "/logos/scooper-mockup.svg",
       github: "https://github.com/bakejona/scooper-co",
       live: "https://scooper-co.com/",
       tools: ["Next.js","React", "CSS", "HTML",]

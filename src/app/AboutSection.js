@@ -1,42 +1,73 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import styles from './AboutSection.module.css';
 import Image from 'next/image';
 import NavBar from './Navigation';
-import SkillsCarousel from './SkillsCarousel'; 
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+
+const FULL_TEXT = "Hi, I'm Jonathan";
+const TYPING_SPEED = 80;
+const DELETING_SPEED = 45;
+const PAUSE_AFTER_TYPE = 2200;
+const PAUSE_AFTER_DELETE = 600;
 
 const AboutSection = () => {
   const githubLink = 'https://github.com/bakejona';
   const linkedinLink = 'https://www.linkedin.com/in/jonathan-baker-5291351b5/';
 
+  const [displayed, setDisplayed] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    let timeout;
+
+    if (!isDeleting && displayed === FULL_TEXT) {
+      timeout = setTimeout(() => setIsDeleting(true), PAUSE_AFTER_TYPE);
+    } else if (isDeleting && displayed === '') {
+      timeout = setTimeout(() => setIsDeleting(false), PAUSE_AFTER_DELETE);
+    } else if (isDeleting) {
+      timeout = setTimeout(() => setDisplayed(prev => prev.slice(0, -1)), DELETING_SPEED);
+    } else {
+      timeout = setTimeout(
+        () => setDisplayed(prev => FULL_TEXT.slice(0, prev.length + 1)),
+        TYPING_SPEED
+      );
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting]);
+
   return (
-    <div id="about" className={styles.aboutWrapper}>
-      {/* 1. THE HERO SECTION (Gradient Background) */}
-      <div className={styles.hero}>
-        <NavBar />
-        
-        <div className={styles.container}>
-          <div className={styles.textContainer}>
-            <div className={styles.maskingContainer}>
-              <h1 className={styles.header}><span>👋</span> Hi there, I'm Jonathan</h1>
-            </div>
-            <p className={styles.paragraph}>
-              UX/UI DESIGNER & DEVELOPER 
-            </p>
+    <div id="about" className={styles.card}>
+      <NavBar />
+      <div className={styles.content}>
+        <div className={styles.imageSide}>
+          <Image
+            src="/jb-outline.svg"
+            alt="Jonathan Baker"
+            width={340}
+            height={400}
+            className={styles.outlineImage}
+          />
+        </div>
+        <div className={styles.textSide}>
+          <h1 className={styles.header}>
+            {displayed}<span className={styles.cursor} />
+          </h1>
+          <p className={styles.paragraph}>UX Designer + Front End Developer</p>
+          <p className={styles.motto}>Passionate about creating user-friendly and efficient digital experiences.</p>
+          <p className={styles.paragraph}>Let's design, build, and grow</p>
+          <div className={styles.socialLinks}>
+            <a href={githubLink} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <FaGithub />
+            </a>
+            <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
-
-        <div className={styles.socialLinks}>
-          <a href={githubLink}>
-            <Image src="/logos/github.svg" alt="GitHub" className={styles.socialLogo} width={40} height={40} />
-          </a>
-          <a href={linkedinLink}>
-            <Image src="/logos/linkedin.svg" alt="LinkedIn" className={styles.socialLogo} width={40} height={40} />
-          </a>
-        </div>
       </div>
-
-      {/* 2. THE SKILLS CAROUSEL (The Tab Underneath) */}
-      <SkillsCarousel />
-
     </div>
   );
 };

@@ -1,70 +1,65 @@
 .navbar {
-  /* Change from fixed to absolute so it stays inside the About section */
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%; /* Change to 100% to span full width */
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 860px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+  padding: 0.65rem 1.75rem;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem;
-  background: transparent; /* Make background transparent */
-  z-index: 1000;
-  color: white;
+  width: 100%;
 }
 
-/* Update title color if needed to be visible on your gradient */
 .title {
-  color: #ffffff; /* Adjust this color if it clashes with your new gradient */
+  color: #f08080;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
 }
-    
-    .container {
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      margin: 0 auto;
-    }
-    
-    .navList {
-      font-size: 18px;
-      font-weight: 400;
-      display: flex;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
 
-    .title {
-      color: #f08080;
-    }
-    
-    .navItem {
-      background: none;
-      border: none;
-      padding: 0;
-      font: inherit;
-      cursor: pointer;
-      padding-bottom: 0.2rem;
-      text-decoration: none;
-      color: white;
-      position: relative;
-    }
-    
-    .navItem::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      background: lightcoral;
-      transition: width 0.2s;
-    }
-    
-    .navItem:hover::after {
-      width: 100%;
-    }
+.navList {
+  font-size: 17px;
+  font-weight: 400;
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    
-    
+.navItem {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  padding-bottom: 0.2rem;
+  color: #f08080;
+  position: relative;
+}
+
+.navItem::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: #f08080;
+  transition: width 0.2s;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}

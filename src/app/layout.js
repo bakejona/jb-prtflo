@@ -2,8 +2,6 @@
 import "./globals.css";
 import { Poppins, Outfit } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
-import Head from 'next/head';
-
 export const metadata = {
   icons: {
     icon: '/logos/favicon.png',
@@ -24,10 +22,6 @@ const outfit = Outfit({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        {/* Correct path to favicon in the public folder */}
-        <link rel="icon" href="/logos/favicon.png" />
-      </Head>
       <body className={`${poppins.className} ${outfit.className}`}>
         {children}
         <Analytics />

@@ -8,7 +8,6 @@ const ContactSection = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [responseMessage, setResponseMessage] = useState('');
   const [isSent, setIsSent] = useState(false);
 
   const handleSubmit = (e) => {
@@ -83,7 +82,6 @@ const ContactSection = () => {
         </button>
       </form>
       
-      {responseMessage && <p>{responseMessage}</p>}
     </section>
   );
 };

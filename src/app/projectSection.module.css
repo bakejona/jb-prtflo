@@ -4,12 +4,6 @@
   background-color: white;
 }
 
-.projectsTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
 .projectsGrid {
   display: grid;
   grid-template-columns: 1fr;

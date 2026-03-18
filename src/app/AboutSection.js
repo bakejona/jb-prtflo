@@ -1,6 +1,5 @@
 import styles from './AboutSection.module.css';
 import Image from 'next/image';
-import Head from 'next/head';
 import NavBar from './Navigation';
 import SkillsCarousel from './SkillsCarousel'; 
 
@@ -10,10 +9,6 @@ const AboutSection = () => {
 
   return (
     <div id="about" className={styles.aboutWrapper}>
-      <Head>
-        <title>&#128075; Jonathan</title>
-      </Head>
-
       {/* 1. THE HERO SECTION (Gradient Background) */}
       <div className={styles.hero}>
         <NavBar />

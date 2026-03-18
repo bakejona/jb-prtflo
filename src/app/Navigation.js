@@ -1,19 +1,19 @@
 'use client';
 
 import styles from './Navigation.module.css';
+import { HiOutlineHome, HiOutlineMail } from 'react-icons/hi';
+import { RiLayoutGridLine } from 'react-icons/ri';
+
+const navItems = [
+  { name: 'Home',     path: 'about',    Icon: HiOutlineHome    },
+  { name: 'Projects', path: 'projects', Icon: RiLayoutGridLine },
+  { name: 'Contact',  path: 'contact',  Icon: HiOutlineMail    },
+];
 
 const NavBar = () => {
-  const navItems = [
-    { name: 'home', path: 'about' },
-    { name: 'projects', path: 'projects' },
-    { name: 'contact', path: 'contact' },
-  ];
-
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -21,13 +21,11 @@ const NavBar = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>jb.</h1>
         <ul className={styles.navList}>
-          {navItems.map((item) => (
-            <li key={item.path}>
-              <button 
-                onClick={() => scrollToSection(item.path)}
-                className={styles.navItem}
-              >
-                {item.name}
+          {navItems.map(({ name, path, Icon }) => (
+            <li key={path}>
+              <button onClick={() => scrollToSection(path)} className={styles.navItem}>
+                <Icon className={styles.navIcon} />
+                {name}
               </button>
             </li>
           ))}

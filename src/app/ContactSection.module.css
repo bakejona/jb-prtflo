@@ -14,102 +14,83 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
-  /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);*/
+  border: 1px solid rgba(255, 255, 255, 0.95);
 }
 
 .formText {
   width: 80%;
+  margin-bottom: 8px;
 }
 
 .formContainer h1 {
   font-size: 2.5rem;
+  color: var(--text);
 }
 
 .formContainer p {
-  color: rgb(150, 150, 150);
+  color: var(--text-muted);
   padding-bottom: 15px;
 }
 
 .formInput {
   height: 50px;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
+  padding: 10px 14px;
+  margin: 8px 0;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  color: var(--text);
   width: 80%;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.formInput::placeholder { color: #bbb; }
+.formInput:focus {
+  outline: none;
+  border-color: var(--primary);
 }
 
 textarea.formInput {
-  height: 80px;
-}
-
-.formInput:focus,
-textarea.formInput:focus {
-  outline-color: black;
+  height: 100px;
+  resize: none;
 }
 
 .submitButton {
   width: 80%;
-  padding: 15px 15px;
-  background-color: black;
+  padding: 14px 20px;
+  background: var(--text);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
   text-align: left;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 4px;
 }
 
 .submitButton:hover {
-  background-color: rgb(60, 60, 60);
+  background: #333;
   transform: scale(1.01);
 }
 
-/* ------------------------------------------- */
-/* Tablet & Phone Media Queries */
-/* ------------------------------------------- */
-
-/* Media Query for Tablets (max-width: 768px) */
 @media (max-width: 768px) {
-  .formContainer {
-    max-width: 90%;
-    padding: 15px;
-    border-radius: 20px;
-  }
-
-  .formText {
-    width: 90%;
-    text-align: center;
-  }
-
-  .formInput,
-  .submitButton {
-    width: 90%;
-  }
+  .formContainer { max-width: 90%; padding: 15px; }
+  .formText { width: 90%; text-align: center; }
+  .formInput, .submitButton { width: 90%; }
 }
 
-/* Media Query for Phones (max-width: 480px) */
 @media (max-width: 480px) {
-  .contactSection {
-    height: auto;
-  }
-
-  .formContainer {
-    max-width: 100%;
-    border-radius: 0;
-    padding: 10px;
-    border-radius: 20px;
-  }
-  
-  .formText {
-    width: 100%;
-    text-align: center;
-  }
-
-  .formInput,
-  .submitButton {
-    width: 100%;
-  }
+  .contactSection { height: auto; }
+  .formContainer { max-width: 100%; padding: 10px; }
+  .formText { width: 100%; text-align: center; }
+  .formInput, .submitButton { width: 100%; }
 }

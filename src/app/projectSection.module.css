@@ -1,14 +1,44 @@
 .projectsSection {
   padding: 40px 40px 60px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff9f7 0%, #fde8e8 55%, #fff8f5 100%);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
 
+/* ── Interactive gradient orbs ── */
+.orb1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 195, 140, 0.45) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: left 0.12s ease-out, top 0.12s ease-out;
+  z-index: 0;
+}
 
+.orb2 {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 128, 128, 0.3) 0%, transparent 68%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: left 0.28s ease-out, top 0.28s ease-out;
+  z-index: 0;
 }
 
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
-  row-gap: 20px; /* extra space for popup overflow */
+  row-gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -53,7 +83,7 @@
   bottom: 14px;
   left: 14px;
   right: 14px;
-  background: linear-gradient(135deg, rgba(253, 224, 206, 0.82) 0%, rgba(245, 162, 162, 0.65) 45%, rgba(252, 232, 232, 0.78) 100%);
+  background: linear-gradient(135deg, rgba(253, 243, 235, 0.97) 0%, rgba(240, 128, 128, 0.72) 100%);
   border-radius: 16px;
   padding: 16px 18px 14px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13), 0 2px 8px rgba(0, 0, 0, 0.07);
@@ -102,22 +132,71 @@
   font-size: 0.82rem;
   color: #2a2529;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+/* ── Footer: read more + action buttons ── */
+.popupFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .readMore {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: #2a252920;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-radius: 12px;
-  padding: 0.55rem 1.4rem;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
+.readMoreArrow {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+@keyframes readMoreGlow {
+  0%, 100% { box-shadow: 0 0 6px rgba(240, 128, 128, 0.45), 0 1px 4px rgba(0, 0, 0, 0.06); }
+  50%       { box-shadow: 0 0 18px rgba(240, 128, 128, 0.85), 0 1px 4px rgba(0, 0, 0, 0.06); }
+}
+
+.readMore:hover {
+  background: rgba(255, 255, 255, 0.42);
+  animation: readMoreGlow 1.2s ease-in-out infinite;
+}
+
+/* ── GitHub / Live link circular buttons ── */
+.popupActions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #2a2529;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.actionBtn:hover {
+  background: rgba(255, 255, 255, 0.42);
+  transform: scale(1.1);
+}

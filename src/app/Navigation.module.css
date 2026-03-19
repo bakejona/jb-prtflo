@@ -62,3 +62,53 @@
   font-size: 1rem;
   flex-shrink: 0;
 }
+
+/* ── Subpage nav click animation ── */
+@keyframes navPulse {
+  0%   { transform: scale(1);    background: transparent; }
+  40%  { transform: scale(0.93); background: rgba(240, 128, 128, 0.18); }
+  100% { transform: scale(1);    background: transparent; }
+}
+
+.navItemClick {
+  animation: navPulse 0.32s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+    border-bottom: none;
+    padding: 0.55rem 1rem;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .navList {
+    gap: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .navItem {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .navIcon {
+    font-size: 1.3rem;
+  }
+}

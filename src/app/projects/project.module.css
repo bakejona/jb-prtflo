@@ -1,0 +1,85 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff9f7 0%, #fde8e8 55%, #fff8f5 100%);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* First row gets extra top padding to clear fixed nav */
+.row:first-of-type {
+  padding-top: 120px;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.rowImage {
+  flex: 0 0 46%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.rowImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.rowText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rowText h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2a2529;
+  line-height: 1.2;
+}
+
+.rowText p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.75;
+}
+
+.divider {
+  width: 48px;
+  height: 3px;
+  background: #f08080;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .row,
+  .row.reverse {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 28px;
+  }
+
+  .row:first-of-type {
+    padding-top: 80px;
+  }
+
+  .rowImage {
+    flex: unset;
+    width: 100%;
+  }
+
+  .rowText h2 {
+    font-size: 1.5rem;
+  }
+}

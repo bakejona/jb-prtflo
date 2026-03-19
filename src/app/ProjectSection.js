@@ -1,6 +1,22 @@
+'use client';
+
+import { useState, useRef } from 'react';
 import styles from "./projectSection.module.css";
+import { FaGithub, FaArrowRight, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectsSection = () => {
+  const [mouse, setMouse] = useState({ x: 50, y: 50 });
+  const sectionRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const rect = sectionRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setMouse({
+      x: ((e.clientX - rect.left) / rect.width) * 100,
+      y: ((e.clientY - rect.top)  / rect.height) * 100,
+    });
+  };
+
   const projects = [
     {
       id: 1,
@@ -9,6 +25,8 @@ const ProjectsSection = () => {
       image: "/mockups/clarity-mockup.png",
       tools: ["React", "Vite", "Electron"],
       slug: "clarity",
+      github: "https://github.com/bakejona/clarity-v1",
+      liveUrl: "#",
     },
     {
       id: 2,
@@ -17,6 +35,8 @@ const ProjectsSection = () => {
       image: "/mockups/plant-pal-mockup.png",
       tools: ["JavaScript", "Vite", "SCSS", "Firebase"],
       slug: "plant-pal",
+      github: "https://github.com/bakejona/plant-app",
+      liveUrl: "https://fir-setup-f2b47.web.app",
     },
     {
       id: 3,
@@ -25,6 +45,9 @@ const ProjectsSection = () => {
       image: "/mockups/loci-mockup.png",
       tools: ["Figma", "Adobe XD"],
       slug: "loci",
+      github: null,
+      liveUrl: null,
+      noReadMore: true,
     },
     {
       id: 4,
@@ -33,11 +56,28 @@ const ProjectsSection = () => {
       image: "/mockups/scooper-mockup.png",
       tools: ["Next.js", "React"],
       slug: "scooper-co",
+      github: "https://github.com/bakejona/scooper-co",
+      liveUrl: "https://scooper-co.com/",
+      noReadMore: true,
     },
   ];
 
   return (
-    <section id="projects" className={styles.projectsSection}>
+    <section
+      id="projects"
+      ref={sectionRef}
+      className={styles.projectsSection}
+      onMouseMove={handleMouseMove}
+    >
+      <div
+        className={styles.orb1}
+        style={{ left: `${mouse.x}%`, top: `${mouse.y}%` }}
+      />
+      <div
+        className={styles.orb2}
+        style={{ left: `${100 - mouse.x * 0.6}%`, top: `${100 - mouse.y * 0.7}%` }}
+      />
+
       <div className={styles.projectsGrid}>
         {projects.map((project) => (
           <div key={project.id} className={styles.cardOuter}>
@@ -55,9 +95,29 @@ const ProjectsSection = () => {
               </div>
               <h2 className={styles.popupTitle}>{project.title}</h2>
               <p className={styles.popupDesc}>{project.description}</p>
-              <a href={`/projects/${project.slug}`} className={styles.readMore}>
-                Read More
-              </a>
+              {(!project.noReadMore || project.github || project.liveUrl) && (
+                <div className={styles.popupFooter}>
+                  {!project.noReadMore && (
+                    <a href={`/projects/${project.slug}`} className={styles.readMore}>
+                      Read More <FaArrowRight className={styles.readMoreArrow} />
+                    </a>
+                  )}
+                  {(project.github || project.liveUrl) && (
+                    <div className={styles.popupActions}>
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.actionBtn} title="GitHub">
+                          <FaGithub />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.actionBtn} title="Live site">
+                          <FaExternalLinkAlt />
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
           </div>

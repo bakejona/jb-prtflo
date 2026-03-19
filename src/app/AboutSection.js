@@ -71,8 +71,8 @@ const AboutSection = () => {
           <Image
             src="/jb-outline.svg"
             alt="Jonathan Baker"
-            width={340}
-            height={400}
+            width={275}
+            height={275}
             className={styles.outlineImage}
           />
         </div>

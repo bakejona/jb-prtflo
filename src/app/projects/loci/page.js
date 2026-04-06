@@ -1,4 +1,5 @@
 import NavBar from '../../Navigation';
+import BackButton from '../BackButton';
 import styles from '../project.module.css';
 
 const rows = [
@@ -28,6 +29,7 @@ export default function LociPage() {
   return (
     <main className={styles.page}>
       <NavBar />
+      <BackButton />
       <div className={styles.rowsContainer}>
         {rows.map((row, i) => (
           <section key={i} className={`${styles.row} ${i % 2 === 1 ? styles.reverse : ''}`}>

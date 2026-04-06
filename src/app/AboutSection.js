@@ -5,7 +5,7 @@ import styles from './AboutSection.module.css';
 import Image from 'next/image';
 import NavBar from './Navigation';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { HiOutlineDocument } from 'react-icons/hi';
+import { HiOutlineDocument, HiOutlineMail } from 'react-icons/hi';
 
 const FULL_TEXT = "Hi, I'm Jonathan";
 const TYPING_SPEED = 80;
@@ -93,6 +93,10 @@ const AboutSection = () => {
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.resumeBtn}>
               <HiOutlineDocument className={styles.resumeIcon} />
               <span className={styles.resumeText}>Resume</span>
+            </a>
+            <a href="mailto:jbakerbba@gmail.com" className={styles.resumeBtn}>
+              <HiOutlineMail className={styles.resumeIcon} />
+              <span className={styles.resumeText}>Email</span>
             </a>
           </div>
         </div>

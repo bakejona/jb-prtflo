@@ -41,6 +41,12 @@ section {
   display: none;
 }
 
+@media (max-width: 768px) {
+  body > div {
+    padding-bottom: 80px;
+  }
+}
+
 input, textarea {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);

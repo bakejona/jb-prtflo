@@ -3,18 +3,55 @@
   background: linear-gradient(135deg, #fff9f7 0%, #fde8e8 55%, #fff8f5 100%);
 }
 
+/* ── Back button ── */
+.backBtn {
+  position: fixed;
+  top: 14px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #2a2529;
+  font-size: 1.2rem;
+  text-decoration: none;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.42);
+  transform: scale(1.1);
+}
+
+.rowsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 80px 4% 0;
+}
+
 .row {
   display: flex;
   align-items: center;
-  gap: 60px;
-  padding: 60px 8%;
+  gap: 36px;
+  padding: 28px 28px;
   max-width: 1400px;
   margin: 0 auto;
-}
-
-/* First row gets extra top padding to clear fixed nav */
-.row:first-of-type {
-  padding-top: 120px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
 .row.reverse {
@@ -22,10 +59,9 @@
 }
 
 .rowImage {
-  flex: 0 0 46%;
+  flex: 0 0 48%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .rowImage img {
@@ -63,15 +99,16 @@
 }
 
 @media (max-width: 768px) {
+  .rowsContainer {
+    padding: 70px 16px 0;
+    gap: 16px;
+  }
+
   .row,
   .row.reverse {
     flex-direction: column;
-    padding: 40px 24px;
-    gap: 28px;
-  }
-
-  .row:first-of-type {
-    padding-top: 80px;
+    padding: 32px 20px;
+    gap: 24px;
   }
 
   .rowImage {
@@ -81,5 +118,9 @@
 
   .rowText h2 {
     font-size: 1.5rem;
+  }
+
+  .page {
+    padding-bottom: 90px;
   }
 }

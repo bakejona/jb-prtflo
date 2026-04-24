@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       id: 2,
       title: "PlantPal",
       description: "A smart plant care companion with a matchmaker quiz, automated watering schedules, and real-time weather integration.",
-      image: "/mockups/plant-pal-mockup.png",
+      image: "/plantpal/plantpal-mockup-main.jpg",
       tools: ["JavaScript", "Vite", "SCSS", "Firebase"],
       slug: "plant-pal",
       github: "https://github.com/bakejona/plant-app",
